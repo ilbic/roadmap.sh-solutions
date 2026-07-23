@@ -12,8 +12,17 @@ services:
    - "--config.file=/etc/prometheus/prometheus.yml"
    - "--storage.tsdb.retention.time=7d" #don't want to max out storage!
 
+ # hardware metrics
  node-exporter:
   image: prom/node-exporter:latest
 
   ports:
    - "9100:9100"
+
+ # external website metrics
+ blackbox-exporter:
+  image: prom/blackbox-exporter:latest
+
+ # internal webserver metrics
+ nginx-exporter:
+  image: nginx/nginx-prometheus-exporter:latest
