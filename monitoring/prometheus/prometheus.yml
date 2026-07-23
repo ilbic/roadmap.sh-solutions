@@ -1,7 +1,9 @@
+# just copied from prometheus website for now
 global:
   scrape_interval: 15s
 
 scrape_configs:
 - job_name: node
   static_configs:
-  - targets: ['localhost:9100']
+  # this works because docker does clever internal DNS routing - scraping localhost is like scraping yourself!
+  - targets: ['node-exporter:9100']
