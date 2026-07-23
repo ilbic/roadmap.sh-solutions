@@ -22,7 +22,10 @@ services:
  # external website metrics
  blackbox-exporter:
   image: prom/blackbox-exporter:latest
-
+  ports:
+  - "9115:9115"
  # internal webserver metrics
  nginx-exporter:
   image: nginx/nginx-prometheus-exporter:latest
+  ports:
+  - "9113:9113"
