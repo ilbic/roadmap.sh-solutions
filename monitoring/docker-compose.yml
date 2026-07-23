@@ -1,0 +1,13 @@
+services:
+ prometheus: # run the latest prometheus image
+  image: prom/prometheus:latest
+  # map server ports onto container ports
+  ports:
+   - "9090:9090"
+  # map existing lcal config file onto container - will come in handy next
+  volumes:
+   - "./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml"
+   # tell prometheus where to expect config from
+  command:
+   - "--config.file=/etc/prometheus/prometheus.yml"
+   - "--storage.tsdb.retention.time=7d" #don't want to max out storage!
