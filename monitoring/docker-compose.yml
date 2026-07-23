@@ -13,4 +13,7 @@ services:
    - "--storage.tsdb.retention.time=7d" #don't want to max out storage!
 
  node-exporter:
-  etc etc
+  image: prom/node-exporter:latest
+
+  ports:
+   - "9100:9100"
