@@ -11,3 +11,6 @@ services:
   command:
    - "--config.file=/etc/prometheus/prometheus.yml"
    - "--storage.tsdb.retention.time=7d" #don't want to max out storage!
+
+ node-exporter:
+  etc etc
