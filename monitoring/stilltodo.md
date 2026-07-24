@@ -1,11 +1,11 @@
 ### Prometheus
 - ~~Set up persistent storage via docker compose~~
 - Configure scraping of nginx
-- ~~Configure scraping of blackbox~~~
+- ~~Configure scraping of blackbox~~
 
 ### Blackbox, Nginx, Node
 - Configure relevant scraping metrics (?)
-- Nginx: connect to actual webserver
+- ~~Nginx: connect to actual webserver~~
 - Blackbox: decide what metrics to actually scrape
 
 ### Grafana
