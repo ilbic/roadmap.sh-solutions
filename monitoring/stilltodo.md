@@ -1,7 +1,7 @@
 ### Prometheus
-- Set up persistent storage via docker compose
-- Configure scraping of blackbox, nginx
-
+- ~~Set up persistent storage via docker compose~~
+- Configure scraping of nginx
+- ~~Configure scraping of blackbox~~~
 
 ### Blackbox, Nginx, Node
 - Configure relevant scraping metrics (?)

@@ -32,8 +32,9 @@ services:
  # internal webserver metrics
  nginx-exporter:
   image: nginx/nginx-prometheus-exporter:latest
-  ports:
-  - "9113:9113"
+  network_mode: host
+  command:
+  - "--nginx.scrape-uri=http://127.0.0.1:8080/nginx_status"
 
 volumes:
   prometheus-data:
